@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>我的钱包</title>
+	<link rel="stylesheet" href="css/mui.min.css">
+	<link rel="stylesheet" href="icon/iconfont.css">
+	<link rel="stylesheet" href="css/myMoney.css?20002">
+	<!-- <link rel="stylesheet" href="css/common.css?20200731"> -->
+	<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_1743090_atjgl19pa2q.css">
+
+	<script type="text/javascript" charset="utf-8" src="js/jweixin-1.4.0.js"></script>
+	<script type="text/javascript" charset="utf-8" src="./js/jquery1/jquery.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="./js/jquery1/store.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/mui.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="./cfg/initConfig.js?100"></script>
+	<script type="text/javascript" charset="utf-8" src="./js/common.js?001"></script>
+	<script type="text/javascript" charset="utf-8" src="js/openMidas.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/getweixin.js?100"></script>
+	<script type="text/javascript" charset="utf-8" src="js/myMoney.js?202006"></script>
+	<!-- <script type="text/javascript" charset="utf-8" src="js/trolley.js?202002"></script> -->
+	<script type="text/javascript" charset="utf-8" src="js/tab.js?2006"></script>
+	<script type="text/javascript" charset="utf-8" src="icon/icon2/iconfont.js"></script>
+	<script>
+		document.write('<link rel="stylesheet" href="css/common.css?v=' + new Date().getTime() + '">')
+		document.write('<script src="js/trolley.js?v=' + new Date().getTime() + '"><\/script>')
+	</script>
+</head>
+
+<body>
+	<div class="app">
+		<div class="topModule">
+			<div class="topContent">
+				<span class="topContent-label">余额</span>
+				<span class="userBalance">0</span>
+			</div>
+		</div>
+		<div class="bottomModule">
+			<span class="bottomModule-label">选择充值金额</span>
+			<div class="bottomContent">
+				<div class="commodity"  title="20000">
+					<p>200元</p>
+					<p>立赠20元</p>
+				</div>
+				<div class="commodity"  title="10000">
+					<p>100元</p>
+					<p>立赠10元</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="rechargeMask">
+		<div class="recharge">
+			<div class="recharge-item" id="" onclick="">
+				<svg class="rechargeIcon" aria-hidden="true">
+					<use xlink:href="#icon-weixinzhifu"></use>
+				</svg>
+				<span>微信支付</span>
+				<div class="squaredFour">
+					<input type="radio" value="weixin" id="rechargeNum1" name="rechargeBox">
+					<label for="rechargeNum1"></label>
+				</div>
+			</div>
+			<div class="recharge-item" id="" onclick="">
+				<svg class="rechargeIcon" aria-hidden="true">
+					<use xlink:href="#icon-youhuiquan1"></use>
+				</svg>
+				<span>优惠券支付</span>
+				<div class="squaredFour">
+					<input type="radio" value="youhuiquan" id="rechargeNum3" name="rechargeBox">
+					<label for="rechargeNum3"></label>
+				</div>
+			</div>
+			<div class="store-btn"  onclick='confirmRechargeMode()'>确定</div>
+		</div>
+	</div>
+
+	<nav class="mui-bar mui-bar-tab">
+		<a class="mui-tab-item" id="home">
+			<span class="mui-icon mui-icon-home"></span>
+			<span class="mui-tab-label">首页</span>
+		</a>
+		<a class="mui-tab-item outerCircle" id="myCar">
+			<div id="end" class="touxiang">
+				<!-- <div id="lastname"></div> -->
+				<img src="./img/shopCar.png" alt="">
+				<span id="totalCardNum" class="subscript" title="">0</span>
+			</div>
+		</a>
+		<a class="mui-tab-item  mui-active" id="my">
+			<span class="mui-icon iconfont icon-touxiang" ></span>
+			<span class="mui-tab-label">我的</span>
+		</a>
+	</nav>
+	
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+{
+  "id": "1743090",
+  "name": "111",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5195350",
+      "name": "门店",
+      "font_class": "mendian",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "9306311",
+      "name": "微信支付",
+      "font_class": "weixinzhifu",
+      "unicode": "e689",
+      "unicode_decimal": 59017
+    },
+    {
+      "icon_id": "7155297",
+      "name": "切换账号",
+      "font_class": "qiehuanzhanghao",
+      "unicode": "e654",
+      "unicode_decimal": 58964
+    },
+    {
+      "icon_id": "1761531",
+      "name": "金额",
+      "font_class": "jine",
+      "unicode": "e64f",
+      "unicode_decimal": 58959
+    },
+    {
+      "icon_id": "3216169",
+      "name": "账单",
+      "font_class": "icon--",
+      "unicode": "e757",
+      "unicode_decimal": 59223
+    },
+    {
+      "icon_id": "11346894",
+      "name": "头像",
+      "font_class": "touxiang",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    }
+  ]
+}

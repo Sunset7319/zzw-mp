@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>商家订单</title>
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/mui.picker.min.css">
+		<link rel="stylesheet" href="css/index.css">
+		
+		<script type="text/javascript" charset="utf-8" src="js/jweixin-1.4.0.js"></script>
+		<script type="text/javascript" charset="utf-8" src="/js/jquery1/jquery.min.js"></script>		
+		<script type="text/javascript" charset="utf-8" src="/js/jquery1/store.js"></script>		
+		<script type="text/javascript" charset="utf-8" src="js/mui.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="js/mui.picker.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="/cfg/initConfig.js?100"></script>
+		<script type="text/javascript" charset="utf-8" src="/js/common.js"></script>		
+		<script type="text/javascript" charset="utf-8" src="js/getweixin.js?100"></script>		
+		<script type="text/javascript" charset="utf-8" src="js/storeOrder.js?100"></script>		
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-left-nav mui-pull-left" id="previousDay">前一天</a>
+			<h1 class="mui-title" id="theCurDay" data-options='{"type":"date"}' class="btn mui-btn mui-btn-block"></h1>			
+			<div id="nextDay">
+			<a class="mui-icon mui-icon-forward mui-pull-right"></a>
+			<span class="mui-icon mui-pull-right">后一天</span>
+			</div>
+		</header>	
+		<div class="mui-content">
+			<div style="padding: 5px 10px;">
+				<div id="deliverStatus" class="mui-segmented-control">
+					<a class="mui-control-item mui-active" id="deliverAllStatus">全部货态（<span id="deliverAllCount"></span>）</a>
+					<a class="mui-control-item" id="deliveringStatus">未送达(<span id="deliveringCount"></span>)</a>
+					<a class="mui-control-item" id="deliveredStatus">已送达(<span id="deliveredCount"></span>)</a>
+				</div>
+			</div>
+			<div style="padding: 5px 10px;">
+				<div id="paidStatus" class="mui-segmented-control">
+					<a class="mui-control-item mui-active" id="payAllStatus">全部款态（<span id="payAllCount"></span>）</a>
+					<a class="mui-control-item" id="havepaidStatus">已付款(<span id="paidCount"></span>)</a>
+					<a class="mui-control-item" id="notPayStatus">未付款(<span id="notPayCount"></span>)</a>
+				</div>				
+			</div>	
+				
+			<ul class="mui-table-view" id="storeOrderList">
+
+			</ul>
+		</div>
+
+	</body>
+</html>

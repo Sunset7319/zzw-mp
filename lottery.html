@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>砸金蛋中奖</title>
+	<link rel="stylesheet" href="css/mui.min.css">
+	<link rel="stylesheet" href="icon/iconfont.css">
+	<link rel="stylesheet" href="css/lottery.css?20002">
+	<!-- <link rel="stylesheet" href="css/common.css?20200731"> -->
+	<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_1743090_1ofriys6kx9.css">
+
+	<script type="text/javascript" charset="utf-8" src="js/jweixin-1.4.0.js"></script>
+	<script type="text/javascript" charset="utf-8" src="./js/jquery1/jquery.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="./js/jquery1/store.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/mui.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="./cfg/initConfig.js?100"></script>
+	<script type="text/javascript" charset="utf-8" src="./js/common.js?001"></script>
+	<script type="text/javascript" charset="utf-8" src="js/openMidas.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/getweixin.js?100"></script>
+	<script type="text/javascript" charset="utf-8" src="js/lottery.js?202004"></script>
+	<!-- <script type="text/javascript" charset="utf-8" src="js/trolley.js?202002"></script> -->
+	<script type="text/javascript" charset="utf-8" src="js/tab.js?2006"></script>
+	<script>
+		document.write('<link rel="stylesheet" href="css/common.css?v=' + new Date().getTime() + '">')
+		document.write('<script src="js/trolley.js?v=' + new Date().getTime() + '"><\/script>')
+	</script>
+</head>
+
+<body>
+	<div class="app">
+		<span class="mainTitle">砸金蛋</span>
+		<div class="lotteryContent">
+			<div class="lotteryEgg">
+				<img src="./img/zjd3.jpg" alt="">
+			</div>
+		</div>
+	</div>
+
+	<div id="showErrDiv" style="display:none">信息加载异常，无法正常运行！</div>
+	
+	<div class="winningMask">
+		<img src="./img/fireworks.png" alt="">
+		<div class="winningContent">
+			<span class="congratulations"></span>
+			<span class="reward-label"></span>
+			<a class="orderDetailReturnBtn" href="./myOrder.html">返回订单</a>
+		</div>
+	</div>
+
+	<nav class="mui-bar mui-bar-tab">
+		<a class="mui-tab-item mui-active" id="home">
+			<span class="mui-icon mui-icon-home"></span>
+			<span class="mui-tab-label">首页</span>
+		</a>
+		<a class="mui-tab-item outerCircle" id="myCar">
+			<div id="end" class="touxiang">
+				<!-- <div id="lastname"></div> -->
+				<img src="./img/shopCar.png" alt="">
+				<span id="totalCardNum" class="subscript" title="">0</span>
+			</div>
+		</a>
+		<a class="mui-tab-item" id="my">
+			<span class="mui-icon iconfont icon-touxiang" ></span>
+			<span class="mui-tab-label">我的</span>
+		</a>
+	</nav>
+	
+</body>
+
+</html>

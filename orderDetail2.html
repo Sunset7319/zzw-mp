@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>订单详情</title>
+	<link rel="stylesheet" href="css/mui.min.css">
+	<link rel="stylesheet" href="css/orderDetail2.css?101">
+
+	<script type="text/javascript" charset="utf-8" src="js/jweixin-1.4.0.js"></script>
+	<script type="text/javascript" charset="utf-8" src="./js/jquery1/jquery.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="./js/jquery1/store.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/mui.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="./cfg/initConfig.js?100"></script>
+	<script type="text/javascript" charset="utf-8" src="./js/common.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/getweixin.js?100"></script>
+	<!-- <script type="text/javascript" charset="utf-8" src="js/orderDetail2.js?102"></script> -->
+	<script type="text/javascript" charset="utf-8" src="js/tab.js?002"></script>
+</head>
+
+<body>
+	<div class="orderDetail">
+		<div class="orderDetail-WaitingForMeal">订单等待取餐中</div>
+		<div class="orderDetail-takeMeal"><button>确认取餐</button></div>
+		<div class="orderDetail-window">
+			<div class="orderDetail-window-font1">窗口</div>
+			<div class="orderDetail-window-font2">1</div>
+			<div class="orderDetail-window-font3">取餐号(001)</div>
+		</div>
+		<div class="orderDetail-prompt">TIPS：请留意屏幕上的排队信息，不要错过取餐时间</div>
+	</div>
+	<div class="orderDetail-orderInfo">
+		<div class="orderDetail-orderInfo-commodity">
+			<div class="orderDetail-orderInfo-commodity-shop">
+				<img src="http://www.zzwct.com/images/a1594f7c20a54cff90d0f9086bc412f4.jpg" class="orderDetail-orderInfo-commodity-img">
+				<span class="orderDetail-orderInfo-commodity-shopName">清华研究院</span>
+				<span class="orderDetail-orderInfo-commodity-contactShop">联系门店</span>
+			</div>
+			<div class="orderDetail-orderInfo-commodity-shop2">
+				<div class="orderDetail-orderInfo-commodity-shop2-left">
+					<img src="http://www.zzwct.com/images/a1594f7c20a54cff90d0f9086bc412f4.jpg" class="orderDetail-orderInfo-commodity-img">
+					<span class="orderDetail-orderInfo-commodity-shop2-name">香菇蒸滑鸡·蒜蓉娃娃菜</span>
+				</div>
+				<div class="orderDetail-orderInfo-commodity-shop2-right">	
+					<span class="orderDetail-orderInfo-commodity-shop2-num">x1</span>
+					<span class="orderDetail-orderInfo-commodity-shop2-price">￥0.01</span>
+				</div>
+			</div>
+			<div class="orderDetail-orderInfo-commodity-shop3">
+				<span class="orderDetail-orderInfo-commodity-shop3-title">门店活动</span>
+				<span class="orderDetail-orderInfo-commodity-shop3-price">-<span>￥</span>0.00</span>
+			</div>
+			<div class="orderDetail-orderInfo-commodity-shop3">
+					<span class="orderDetail-orderInfo-commodity-shop3-price2">实付<span>￥</span>0.01</span>
+				</div>
+		</div>
+		<div class="orderDetail-orderInfo-info">
+			<div class="orderDetail-orderInfo-info-font">订单信息</div>
+			<div class="orderDetail-orderInfo-info-content">
+				<span>订单号</span>
+				<span class="orderDetail-orderInfo-info-content-font">156962358923456</span>
+			</div>
+			<div class="orderDetail-orderInfo-info-content">
+					<span>下单时间</span>
+					<span class="orderDetail-orderInfo-info-content-font">2019-08-02 12:57:58</span>
+				</div>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+.mui-content{
+  margin-bottom: 80px;
+}
+.title{
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  font-weight: bold;
+}
+.commodity-content{
+  background: #fff;
+  padding: 0 0 0 10px;
+}
+.commodity{
+  width: calc(50% - 10px);
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  float: left;
+  margin: 0 10px 10px 0;
+  box-shadow: 2px 2px 3px #eee;
+}
+.commodity-hot{
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 14px;
+  color: red;
+  font-weight: bold;
+}
+.commodity-hot2{
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 14px;
+  color: #7ebf8a;
+  font-weight: bold;
+}
+.commodity-img{
+  width: 100%;
+  height: 70px;
+  overflow: hidden;
+}
+.commodity-img img{
+  width: 100%;
+  height: 100%;
+}
+.commodity-info{
+  padding: 5px;
+  height: 75px;
+}
+.commodity-info-title{
+  font-size: 12px;
+  height: 30px;
+}
+.commodity-info-title-name{
+  max-width: calc(100% - 14px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  float: left;
+}
+.commodity-info-title img{
+  width: 14px;
+}
+.commodity-info-price{
+  height: 35px;
+  line-height: 35px;
+}
+.commodity-info-price span{
+  font-size: 15px;
+  color: red;
+}
+.commodity-info-price-identifier{
+  font-size: 9px;
+}
+.commodity-info-price button{
+  float: right;
+  background: #68a05b;
+  color: #fff;
+}
+.inTheEnd{
+  color: #efcccc;
+  font-size: 13px;
+  text-align: center;
+  background: #fff;
+  position: relative;
+}
+.inTheEnd:before{
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 80px;
+  width: 70px;
+  background: #efcccc;
+  height: 1px;
+}
+.inTheEnd:after{
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 80px;
+  width: 70px;
+  background: #efcccc;
+  height: 1px;
+}
+/*toast信息提示*/
+.mui-toast-container {bottom: 50% !important;}
+/* .mui-toast-message {background: url(/app/themes/default/images/toast.png) no-repeat center 10px #000; opacity: 0.6; color: #fff; width: 180px; padding: 70px 5px 10px 5px;} */

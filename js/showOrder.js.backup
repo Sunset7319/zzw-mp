@@ -1,0 +1,575 @@
+$(document).ready(function(){
+	doBizMain();
+})
+
+var listOneHasData=false;
+var listTwoHasData=false;
+var thePlayStatus=false;
+function doBizMain(){
+	postJson(system_config.interface_biz_host_url+"/listWindowOneWithoutToken.do",
+			{},
+		function(json) {
+			if(json.resultCode==200){
+				
+				var dataLength=json.list.length;
+				listOneHasData=dataLength>0?true:false;
+				doBizShowVedio();
+				//数据清空时，清除显示
+				if(dataLength==0){
+					$("#readyUser1").html("&nbsp;");
+					$("#readyFood1").html("&nbsp;");
+					$("#nextUser1").html("&nbsp;");
+					$("#nextFood1").html("&nbsp;");
+					for(var i=1;i<5;i++){
+						$("#waitUser1"+i).html("");
+					}
+				}else if(dataLength==1){
+					var oneData=json.list[0];
+					var firstReady=false;
+					if(oneData.status==2){
+						firstReady=true;
+					}
+					if(firstReady){
+						$("#readyUser1").html(getShowName(oneData));
+						$("#readyFood1").html(getFoodName(oneData));
+						$("#nextUser1").html("&nbsp;");
+						$("#nextFood1").html("&nbsp;");
+						for(var i=1;i<5;i++){
+							$("#waitUser1"+i).text("");
+						}						
+					}else{
+						$("#readyUser1").html("&nbsp;");
+						$("#readyFood1").html("&nbsp;");
+						$("#nextUser1").html(getShowName(oneData));
+						$("#nextFood1").html(getFoodName(oneData));
+						for(var i=1;i<5;i++){
+							$("#waitUser1"+i).html("");
+						}
+					}
+				}else if(dataLength==2){
+					var oneData=json.list[0];
+					var firstReady=false;
+					if(oneData.status==2){
+						firstReady=true;
+					}
+					if(firstReady){
+						$("#readyUser1").html(getShowName(oneData));
+						$("#readyFood1").html(getFoodName(oneData));
+						$("#nextUser1").html(getShowName(json.list[1]));
+						$("#nextFood1").html(getFoodName(json.list[1]));
+						for(var i=1;i<5;i++){
+							$("#waitUser1"+i).html("");
+						}						
+					}else{
+						$("#readyUser1").html("&nbsp;");
+						$("#readyFood1").html("&nbsp;");
+						$("#nextUser1").html(getShowName(oneData));
+						$("#nextFood1").html(getFoodName(oneData));
+						$("#waitUser11").html(getShowName(json.list[1])+" "+getFoodName(json.list[1]));
+						for(var i=2;i<5;i++){
+							$("#waitUser1"+i).html("");
+						}
+					}					
+				}else if(dataLength==3){
+					var oneData=json.list[0];
+					var firstReady=false;
+					if(oneData.status==2){
+						firstReady=true;
+					}
+					if(firstReady){
+						$("#readyUser1").html(getShowName(oneData));
+						$("#readyFood1").html(getFoodName(oneData));
+						$("#nextUser1").html(getShowName(json.list[1]));
+						$("#nextFood1").html(getFoodName(json.list[1]));
+						$("#waitUser11").html(getShowName(json.list[2])+" "+getFoodName(json.list[2]));
+						for(var i=2;i<5;i++){
+							$("#waitUser1"+i).html("");
+						}						
+					}else{
+						$("#readyUser1").html("&nbsp;");
+						$("#readyFood1").html("&nbsp;");
+						$("#nextUser1").html(getShowName(oneData));
+						$("#nextFood1").html(getFoodName(oneData));
+						$("#waitUser11").html(getShowName(json.list[1])+" "+getFoodName(json.list[1]));
+						$("#waitUser12").html(getShowName(json.list[2])+" "+getFoodName(json.list[2]));
+						for(var i=3;i<5;i++){
+							$("#waitUser1"+i).html("");
+						}
+					}						
+				}else if(dataLength==4){
+					var oneData=json.list[0];
+					var firstReady=false;
+					if(oneData.status==2){
+						firstReady=true;
+					}
+					if(firstReady){
+						$("#readyUser1").html(getShowName(oneData));
+						$("#readyFood1").html(getFoodName(oneData));
+						$("#nextUser1").html(getShowName(json.list[1]));
+						$("#nextFood1").html(getFoodName(json.list[1]));
+						$("#waitUser11").html(getShowName(json.list[2])+" "+getFoodName(json.list[2]));
+						$("#waitUser12").html(getShowName(json.list[3])+" "+getFoodName(json.list[3]));
+						for(var i=3;i<5;i++){
+							$("#waitUser1"+i).html("");
+						}						
+					}else{
+						$("#readyUser1").html("&nbsp;");
+						$("#readyFood1").html("&nbsp;");
+						$("#nextUser1").html(getShowName(oneData));
+						$("#nextFood1").html(getFoodName(oneData));
+						$("#waitUser11").html(getShowName(json.list[1])+" "+getFoodName(json.list[1]));
+						$("#waitUser12").html(getShowName(json.list[2])+" "+getFoodName(json.list[2]));
+						$("#waitUser13").html(getShowName(json.list[3])+" "+getFoodName(json.list[3]));
+						$("#waitUser14").html("");
+						
+					}						
+				}else if(dataLength==5){
+					var oneData=json.list[0];
+					var firstReady=false;
+					if(oneData.status==2){
+						firstReady=true;
+					}
+					if(firstReady){
+						$("#readyUser1").html(getShowName(oneData));
+						$("#readyFood1").html(getFoodName(oneData));
+						$("#nextUser1").html(getShowName(json.list[1]));
+						$("#nextFood1").html(getFoodName(json.list[1]));
+						$("#waitUser11").html(getShowName(json.list[2])+" "+getFoodName(json.list[2]));
+						$("#waitUser12").html(getShowName(json.list[3])+" "+getFoodName(json.list[3]));
+						$("#waitUser13").html(getShowName(json.list[4])+" "+getFoodName(json.list[4]));
+						$("#waitUser14").html("");					
+					}else{
+						$("#readyUser1").html("&nbsp;");
+						$("#readyFood1").html("&nbsp;");
+						$("#nextUser1").html(getShowName(oneData));
+						$("#nextFood1").html(getFoodName(oneData));
+						$("#waitUser11").html(getShowName(json.list[1])+" "+getFoodName(json.list[1]));
+						$("#waitUser12").html(getShowName(json.list[2])+" "+getFoodName(json.list[2]));
+						$("#waitUser13").html(getShowName(json.list[3])+" "+getFoodName(json.list[3]));
+						$("#waitUser14").html(getShowName(json.list[4])+" "+getFoodName(json.list[4]));
+					}						
+				}else if(dataLength>=6){
+					var oneData=json.list[0];
+					var firstReady=false;
+					if(oneData.status==2){
+						firstReady=true;
+					}
+					if(firstReady){
+						$("#readyUser1").html(getShowName(oneData));
+						$("#readyFood1").html(getFoodName(oneData));
+						$("#nextUser1").html(getShowName(json.list[1]));
+						$("#nextFood1").html(getFoodName(json.list[1]));
+						$("#waitUser11").html(getShowName(json.list[2])+" "+getFoodName(json.list[2]));
+						$("#waitUser12").html(getShowName(json.list[3])+" "+getFoodName(json.list[3]));
+						$("#waitUser13").html(getShowName(json.list[4])+" "+getFoodName(json.list[4]));
+						$("#waitUser14").html(getShowName(json.list[5])+" "+getFoodName(json.list[5]));
+					}else{
+						$("#readyUser1").html("&nbsp;");
+						$("#readyFood1").html("&nbsp;");
+						$("#nextUser1").html(getShowName(oneData));
+						$("#nextFood1").html(getFoodName(oneData));
+						$("#waitUser11").html(getShowName(json.list[1])+" "+getFoodName(json.list[1]));
+						$("#waitUser12").html(getShowName(json.list[2])+" "+getFoodName(json.list[2]));
+						$("#waitUser13").html(getShowName(json.list[3])+" "+getFoodName(json.list[3]));
+						$("#waitUser14").html(getShowName(json.list[4])+" "+getFoodName(json.list[4]));
+					}						
+				}
+			}
+	});
+	
+	postJson(system_config.interface_biz_host_url+"/listWindowTwoWithoutToken.do",
+			{},
+		function(json) {
+			if(json.resultCode==200){
+				
+				var dataLength=json.list.length;
+				listOneHasData=dataLength>0?true:false;
+				doBizShowVedio();
+
+				//数据清空时，清除显示
+				if(dataLength==0){
+					$("#readyUser2").html("&nbsp;");
+					$("#readyFood2").html("&nbsp;");
+					$("#nextUser2").html("&nbsp;");
+					$("#nextFood2").html("&nbsp;");
+					for(var i=1;i<5;i++){
+						$("#waitUser2"+i).html("");
+					}
+				}else if(dataLength==1){
+					var oneData=json.list[0];
+					var firstReady=false;
+					if(oneData.status==2){
+						firstReady=true;
+					}
+					if(firstReady){
+						$("#readyUser2").html(getShowName(oneData));
+						$("#readyFood2").html(getFoodName(oneData));
+						$("#nextUser2").html("&nbsp;");
+						$("#nextFood2").html("&nbsp;");
+						for(var i=1;i<5;i++){
+							$("#waitUser2"+i).text("");
+						}						
+					}else{
+						$("#readyUser2").html("&nbsp;");
+						$("#readyFood2").html("&nbsp;");
+						$("#nextUser2").html(getShowName(oneData));
+						$("#nextFood2").html(getFoodName(oneData));
+						for(var i=1;i<5;i++){
+							$("#waitUser2"+i).html("");
+						}
+					}
+				}else if(dataLength==2){
+					var oneData=json.list[0];
+					var firstReady=false;
+					if(oneData.status==2){
+						firstReady=true;
+					}
+					if(firstReady){
+						$("#readyUser2").html(getShowName(oneData));
+						$("#readyFood2").html(getFoodName(oneData));
+						$("#nextUser2").html(getShowName(json.list[1]));
+						$("#nextFood2").html(getFoodName(json.list[1]));
+						for(var i=1;i<5;i++){
+							$("#waitUser2"+i).html("");
+						}						
+					}else{
+						$("#readyUser2").html("&nbsp;");
+						$("#readyFood2").html("&nbsp;");
+						$("#nextUser2").html(getShowName(oneData));
+						$("#nextFood2").html(getFoodName(oneData));
+						$("#waitUser21").html(getShowName(json.list[1])+" "+getFoodName(json.list[1]));
+						for(var i=2;i<5;i++){
+							$("#waitUser2"+i).html("");
+						}
+					}					
+				}else if(dataLength==3){
+					var oneData=json.list[0];
+					var firstReady=false;
+					if(oneData.status==2){
+						firstReady=true;
+					}
+					if(firstReady){
+						$("#readyUser2").html(getShowName(oneData));
+						$("#readyFood2").html(getFoodName(oneData));
+						$("#nextUser2").html(getShowName(json.list[1]));
+						$("#nextFood2").html(getFoodName(json.list[1]));
+						$("#waitUser21").html(getShowName(json.list[2])+" "+getFoodName(json.list[2]));
+						for(var i=2;i<5;i++){
+							$("#waitUser2"+i).html("");
+						}						
+					}else{
+						$("#readyUser2").html("&nbsp;");
+						$("#readyFood2").html("&nbsp;");
+						$("#nextUser2").html(getShowName(oneData));
+						$("#nextFood2").html(getFoodName(oneData));
+						$("#waitUser21").html(getShowName(json.list[1])+" "+getFoodName(json.list[1]));
+						$("#waitUser22").html(getShowName(json.list[2])+" "+getFoodName(json.list[2]));
+						for(var i=3;i<5;i++){
+							$("#waitUser2"+i).html("");
+						}
+					}						
+				}else if(dataLength==4){
+					var oneData=json.list[0];
+					var firstReady=false;
+					if(oneData.status==2){
+						firstReady=true;
+					}
+					if(firstReady){
+						$("#readyUser2").html(getShowName(oneData));
+						$("#readyFood2").html(getFoodName(oneData));
+						$("#nextUser2").html(getShowName(json.list[1]));
+						$("#nextFood2").html(getFoodName(json.list[1]));
+						$("#waitUser21").html(getShowName(json.list[2])+" "+getFoodName(json.list[2]));
+						$("#waitUser22").html(getShowName(json.list[3])+" "+getFoodName(json.list[3]));
+						for(var i=3;i<5;i++){
+							$("#waitUser2"+i).html("");
+						}						
+					}else{
+						$("#readyUser2").html("&nbsp;");
+						$("#readyFood2").html("&nbsp;");
+						$("#nextUser2").html(getShowName(oneData));
+						$("#nextFood2").html(getFoodName(oneData));
+						$("#waitUser21").html(getShowName(json.list[1])+" "+getFoodName(json.list[1]));
+						$("#waitUser22").html(getShowName(json.list[2])+" "+getFoodName(json.list[2]));
+						$("#waitUser23").html(getShowName(json.list[3])+" "+getFoodName(json.list[3]));
+						$("#waitUser24").html("");
+						
+					}						
+				}else if(dataLength==5){
+					var oneData=json.list[0];
+					var firstReady=false;
+					if(oneData.status==2){
+						firstReady=true;
+					}
+					if(firstReady){
+						$("#readyUser2").html(getShowName(oneData));
+						$("#readyFood2").html(getFoodName(oneData));
+						$("#nextUser2").html(getShowName(json.list[1]));
+						$("#nextFood2").html(getFoodName(json.list[1]));
+						$("#waitUser21").html(getShowName(json.list[2])+" "+getFoodName(json.list[2]));
+						$("#waitUser22").html(getShowName(json.list[3])+" "+getFoodName(json.list[3]));
+						$("#waitUser23").html(getShowName(json.list[4])+" "+getFoodName(json.list[4]));
+						$("#waitUser24").html("");					
+					}else{
+						$("#readyUser2").html("&nbsp;");
+						$("#readyFood2").html("&nbsp;");
+						$("#nextUser2").html(getShowName(oneData));
+						$("#nextFood2").html(getFoodName(oneData));
+						$("#waitUser21").html(getShowName(json.list[1])+" "+getFoodName(json.list[1]));
+						$("#waitUser22").html(getShowName(json.list[2])+" "+getFoodName(json.list[2]));
+						$("#waitUser23").html(getShowName(json.list[3])+" "+getFoodName(json.list[3]));
+						$("#waitUser24").html(getShowName(json.list[4])+" "+getFoodName(json.list[4]));
+					}						
+				}else if(dataLength>=6){
+					var oneData=json.list[0];
+					var firstReady=false;
+					if(oneData.status==2){
+						firstReady=true;
+					}
+					if(firstReady){
+						$("#readyUser2").html(getShowName(oneData));
+						$("#readyFood2").html(getFoodName(oneData));
+						$("#nextUser2").html(getShowName(json.list[1]));
+						$("#nextFood2").html(getFoodName(json.list[1]));
+						$("#waitUser21").html(getShowName(json.list[2])+" "+getFoodName(json.list[2]));
+						$("#waitUser22").html(getShowName(json.list[3])+" "+getFoodName(json.list[3]));
+						$("#waitUser23").html(getShowName(json.list[4])+" "+getFoodName(json.list[4]));
+						$("#waitUser24").html(getShowName(json.list[5])+" "+getFoodName(json.list[5]));
+					}else{
+						$("#readyUser2").html("&nbsp;");
+						$("#readyFood2").html("&nbsp;");
+						$("#nextUser2").html(getShowName(oneData));
+						$("#nextFood2").html(getFoodName(oneData));
+						$("#waitUser21").html(getShowName(json.list[1])+" "+getFoodName(json.list[1]));
+						$("#waitUser22").html(getShowName(json.list[2])+" "+getFoodName(json.list[2]));
+						$("#waitUser23").html(getShowName(json.list[3])+" "+getFoodName(json.list[3]));
+						$("#waitUser24").html(getShowName(json.list[4])+" "+getFoodName(json.list[4]));
+					}						
+				}
+			}
+	});
+	
+	postJson(system_config.interface_biz_host_url+"/listWindowThreeWithoutToken.do",
+			{},
+		function(json) {
+			if(json.resultCode==200){
+				
+				var dataLength=json.list.length;
+				listOneHasData=dataLength>0?true:false;
+				doBizShowVedio();
+
+				//数据清空时，清除显示
+				if(dataLength==0){
+					$("#readyUser3").html("&nbsp;");
+					$("#readyFood3").html("&nbsp;");
+					$("#nextUser3").html("&nbsp;");
+					$("#nextFood3").html("&nbsp;");
+					for(var i=1;i<5;i++){
+						$("#waitUser3"+i).html("");
+					}
+				}else if(dataLength==1){
+					var oneData=json.list[0];
+					var firstReady=false;
+					if(oneData.status==2){
+						firstReady=true;
+					}
+					if(firstReady){
+						$("#readyUser3").html(getShowName(oneData));
+						$("#readyFood3").html(getFoodName(oneData));
+						$("#nextUser3").html("&nbsp;");
+						$("#nextFood3").html("&nbsp;");
+						for(var i=1;i<5;i++){
+							$("#waitUser3"+i).text("");
+						}						
+					}else{
+						$("#readyUser3").html("&nbsp;");
+						$("#readyFood3").html("&nbsp;");
+						$("#nextUser3").html(getShowName(oneData));
+						$("#nextFood3").html(getFoodName(oneData));
+						for(var i=1;i<5;i++){
+							$("#waitUser3"+i).html("");
+						}
+					}
+				}else if(dataLength==2){
+					var oneData=json.list[0];
+					var firstReady=false;
+					if(oneData.status==2){
+						firstReady=true;
+					}
+					if(firstReady){
+						$("#readyUser3").html(getShowName(oneData));
+						$("#readyFood3").html(getFoodName(oneData));
+						$("#nextUser3").html(getShowName(json.list[1]));
+						$("#nextFood3").html(getFoodName(json.list[1]));
+						for(var i=1;i<5;i++){
+							$("#waitUser3"+i).html("");
+						}						
+					}else{
+						$("#readyUser3").html("&nbsp;");
+						$("#readyFood3").html("&nbsp;");
+						$("#nextUser3").html(getShowName(oneData));
+						$("#nextFood3").html(getFoodName(oneData));
+						$("#waitUser31").html(getShowName(json.list[1])+" "+getFoodName(json.list[1]));
+						for(var i=2;i<5;i++){
+							$("#waitUser3"+i).html("");
+						}
+					}					
+				}else if(dataLength==3){
+					var oneData=json.list[0];
+					var firstReady=false;
+					if(oneData.status==2){
+						firstReady=true;
+					}
+					if(firstReady){
+						$("#readyUser3").html(getShowName(oneData));
+						$("#readyFood3").html(getFoodName(oneData));
+						$("#nextUser3").html(getShowName(json.list[1]));
+						$("#nextFood3").html(getFoodName(json.list[1]));
+						$("#waitUser31").html(getShowName(json.list[2])+" "+getFoodName(json.list[2]));
+						for(var i=2;i<5;i++){
+							$("#waitUser3"+i).html("");
+						}						
+					}else{
+						$("#readyUser3").html("&nbsp;");
+						$("#readyFood3").html("&nbsp;");
+						$("#nextUser3").html(getShowName(oneData));
+						$("#nextFood3").html(getFoodName(oneData));
+						$("#waitUser31").html(getShowName(json.list[1])+" "+getFoodName(json.list[1]));
+						$("#waitUser32").html(getShowName(json.list[2])+" "+getFoodName(json.list[2]));
+						for(var i=3;i<5;i++){
+							$("#waitUser3"+i).html("");
+						}
+					}						
+				}else if(dataLength==4){
+					var oneData=json.list[0];
+					var firstReady=false;
+					if(oneData.status==2){
+						firstReady=true;
+					}
+					if(firstReady){
+						$("#readyUser3").html(getShowName(oneData));
+						$("#readyFood3").html(getFoodName(oneData));
+						$("#nextUser3").html(getShowName(json.list[1]));
+						$("#nextFood3").html(getFoodName(json.list[1]));
+						$("#waitUser31").html(getShowName(json.list[2])+" "+getFoodName(json.list[2]));
+						$("#waitUser32").html(getShowName(json.list[3])+" "+getFoodName(json.list[3]));
+						for(var i=3;i<5;i++){
+							$("#waitUser3"+i).html("");
+						}						
+					}else{
+						$("#readyUser3").html("&nbsp;");
+						$("#readyFood3").html("&nbsp;");
+						$("#nextUser3").html(getShowName(oneData));
+						$("#nextFood3").html(getFoodName(oneData));
+						$("#waitUser31").html(getShowName(json.list[1])+" "+getFoodName(json.list[1]));
+						$("#waitUser32").html(getShowName(json.list[2])+" "+getFoodName(json.list[2]));
+						$("#waitUser33").html(getShowName(json.list[3])+" "+getFoodName(json.list[3]));
+						$("#waitUser34").html("");
+						
+					}						
+				}else if(dataLength==5){
+					var oneData=json.list[0];
+					var firstReady=false;
+					if(oneData.status==2){
+						firstReady=true;
+					}
+					if(firstReady){
+						$("#readyUser3").html(getShowName(oneData));
+						$("#readyFood3").html(getFoodName(oneData));
+						$("#nextUser3").html(getShowName(json.list[1]));
+						$("#nextFood3").html(getFoodName(json.list[1]));
+						$("#waitUser31").html(getShowName(json.list[2])+" "+getFoodName(json.list[2]));
+						$("#waitUser32").html(getShowName(json.list[3])+" "+getFoodName(json.list[3]));
+						$("#waitUser33").html(getShowName(json.list[4])+" "+getFoodName(json.list[4]));
+						$("#waitUser34").html("");					
+					}else{
+						$("#readyUser3").html("&nbsp;");
+						$("#readyFood3").html("&nbsp;");
+						$("#nextUser3").html(getShowName(oneData));
+						$("#nextFood3").html(getFoodName(oneData));
+						$("#waitUser31").html(getShowName(json.list[1])+" "+getFoodName(json.list[1]));
+						$("#waitUser32").html(getShowName(json.list[2])+" "+getFoodName(json.list[2]));
+						$("#waitUser33").html(getShowName(json.list[3])+" "+getFoodName(json.list[3]));
+						$("#waitUser34").html(getShowName(json.list[4])+" "+getFoodName(json.list[4]));
+					}						
+				}else if(dataLength>=6){
+					var oneData=json.list[0];
+					var firstReady=false;
+					if(oneData.status==2){
+						firstReady=true;
+					}
+					if(firstReady){
+						$("#readyUser3").html(getShowName(oneData));
+						$("#readyFood3").html(getFoodName(oneData));
+						$("#nextUser3").html(getShowName(json.list[1]));
+						$("#nextFood3").html(getFoodName(json.list[1]));
+						$("#waitUser31").html(getShowName(json.list[2])+" "+getFoodName(json.list[2]));
+						$("#waitUser32").html(getShowName(json.list[3])+" "+getFoodName(json.list[3]));
+						$("#waitUser33").html(getShowName(json.list[4])+" "+getFoodName(json.list[4]));
+						$("#waitUser34").html(getShowName(json.list[5])+" "+getFoodName(json.list[5]));
+					}else{
+						$("#readyUser3").html("&nbsp;");
+						$("#readyFood3").html("&nbsp;");
+						$("#nextUser3").html(getShowName(oneData));
+						$("#nextFood3").html(getFoodName(oneData));
+						$("#waitUser31").html(getShowName(json.list[1])+" "+getFoodName(json.list[1]));
+						$("#waitUser32").html(getShowName(json.list[2])+" "+getFoodName(json.list[2]));
+						$("#waitUser33").html(getShowName(json.list[3])+" "+getFoodName(json.list[3]));
+						$("#waitUser34").html(getShowName(json.list[4])+" "+getFoodName(json.list[4]));
+					}						
+				}
+			}
+	});		
+}
+
+function getShowName(json){
+	var nameTxt=json.deliverOrder+"号";
+	//if(json.nickname.length>0){
+		//nameTxt+=" "+json.nickname.substr(0,1);
+	//}
+	return nameTxt;
+}
+function getFoodName(json){
+	if(json.foodName.indexOf("·")>0){
+		return json.foodName.substr(0,json.foodName.indexOf("·"));
+	}else{
+		var foodNames=json.foodName.split(",");
+		// if(foodNames.length==1){
+		// 	return json.foodName.substr(0,5);
+		// }else{
+		// 	return json.foodName.substr(0,5)+"共"+(foodNames.length)+"碗";
+		// }
+		if (json.ext1 == "soup") {
+			if(foodNames.length==1){
+				return json.foodName.substr(0,5)+"-汤";
+			}else{
+				return json.foodName.substr(0,5)+"共"+(foodNames.length)+"碗"+"-汤";
+			}
+		}else{
+			if(foodNames.length==1){
+				return json.foodName.substr(0,5);
+			}else{
+				return json.foodName.substr(0,5)+"共"+(foodNames.length)+"碗";
+			}
+		}
+	}
+}
+
+function doBizShowVedio(){
+	if(listOneHasData||listTwoHasData){
+		$("#showOrder").show();
+		$("#showVedio").hide();
+		if(thePlayStatus){
+			setTimeout(function () { $("#theVedioPlay")[0].pause(); }, 3000);
+			thePlayStatus=false;
+		}
+	}else{
+		/**
+		$("#showOrder").hide();
+		$("#showVedio").show();
+		if(!thePlayStatus){
+			setTimeout(function () { $("#theVedioPlay")[0].play(); }, 3000);
+			thePlayStatus=true;
+		}**/
+	}
+}

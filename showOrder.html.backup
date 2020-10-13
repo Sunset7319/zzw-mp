@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>订单处理</title>
+<link rel="stylesheet" href="css/showOrder.css?2003"> 
+	<script type="text/javascript" charset="utf-8" src="./js/jquery1/jquery.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="./cfg/initConfig.js?100"></script>
+	<script type="text/javascript" charset="utf-8" src="./js/common.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/showOrder.js?2009"></script>
+</head>
+<body>
+<div id="showOrder">
+    <div class="orderHeader">
+        <span class="orderHeader-storeName" style="color:red">扫码点单、吃前拌一拌！</span>
+        <span class="orderHeader-time" id="time"></span>
+    </div>
+    <div class="orderWindow">
+        <button>1号窗口</button>
+        <button>2号窗口</button>
+        <button>3号窗口</button>
+    </div>
+    <div class="orderQueue">
+        <div class="orderQueue-module">
+            <div class="orderQueue-module-module">
+                <div class="orderQueue-module-module-left">
+                    <div>当前</div>
+                    <div>取餐</div>
+                </div>
+                <div class="orderQueue-module-module-right">
+                    <div id="readyUser1">&nbsp;</div>
+                    <div id="readyFood1">&nbsp;</div>
+                </div>
+            </div>
+            <div class="orderQueue-module-module">
+                <div class="orderQueue-module-module-left">
+                    <div>当前</div>
+                    <div>取餐</div>
+                </div>
+                <div class="orderQueue-module-module-right">
+                    <div id="readyUser2">&nbsp;</div>
+                    <div id="readyFood2">&nbsp;</div>
+                </div>
+            </div>
+            <div class="orderQueue-module-module">
+                <div class="orderQueue-module-module-left">
+                    <div>当前</div>
+                    <div>取餐</div>
+                </div>
+                <div class="orderQueue-module-module-right">
+                    <div id="readyUser3">&nbsp;</div>
+                    <div id="readyFood3">&nbsp;</div>
+                </div>
+            </div>
+        </div>
+        <div class="orderQueue-module">
+            <div class="orderQueue-module-module">
+                <div class="orderQueue-module-module-left">
+                    <div>准备</div>
+                    <div>取餐</div>
+                </div>
+                <div class="orderQueue-module-module-right2">
+                  <div id="nextUser1">&nbsp;</div>
+                  <div id="nextFood1">&nbsp;</div>
+                </div>
+            </div>
+            <div class="orderQueue-module-module">
+                <div class="orderQueue-module-module-left">
+                    <div>准备</div>
+                    <div>取餐</div>
+                </div>
+                <div class="orderQueue-module-module-right2">
+                   <div id="nextUser2">&nbsp;</div>
+                   <div id="nextFood2">&nbsp;</div>
+                </div>
+            </div>
+            <div class="orderQueue-module-module">
+                <div class="orderQueue-module-module-left">
+                    <div>准备</div>
+                    <div>取餐</div>
+                </div>
+                <div class="orderQueue-module-module-right2">
+                    <div id="nextUser3">&nbsp;</div>
+                    <div id="nextFood3">&nbsp;</div>
+                </div>
+            </div>
+        </div>
+        <div class="orderQueue-module2">
+            <div class="orderQueue-module2-module">
+                <div class="orderQueue-module2-module-left">
+                    <div>等候中</div>
+                </div>
+                <div class="orderQueue-module2-module-right">
+                    <div class="orderQueue-module2-module-right-module">
+                        <div id="waitUser11"></div>
+                        <div id="waitUser12"></div>
+                    </div>
+                    <div class="orderQueue-module2-module-right-module">
+                        <div id="waitUser13"></div>
+                        <div id="waitUser14"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="orderQueue-module2-module">
+                <div class="orderQueue-module2-module-left">
+                    <div>等候中</div>
+                </div>
+                <div class="orderQueue-module2-module-right">
+                    <div class="orderQueue-module2-module-right-module">
+                        <div id="waitUser21"></div>
+                        <div id="waitUser22"></div>
+                    </div>
+                    <div class="orderQueue-module2-module-right-module">
+                        <div id="waitUser23"></div>
+                        <div id="waitUser24"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="orderQueue-module2-module">
+                <div class="orderQueue-module2-module-left">
+                    <div>等候中</div>
+                </div>
+                <div class="orderQueue-module2-module-right">
+                    <div class="orderQueue-module2-module-right-module">
+                        <div id="waitUser31"></div>
+                        <div id="waitUser32"></div>
+                    </div>
+                    <div class="orderQueue-module2-module-right-module">
+                        <div id="waitUser33"></div>
+                        <div id="waitUser34"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="showVedio" style="display:none">
+
+	<video id="theVedioPlay" controls="controls" loop="loop"  width="100%" muted>
+	  <source src="img/the.mp4" type="video/mp4" />
+	  	浏览器不支持
+	</video>
+</div>
+
+<script type="text/javascript">
+function time(){
+	var vWeek,vWeek_s,vDay;
+	vWeek = ["星期天","星期一","星期二","星期三","星期四","星期五","星期六"];
+	var date =  new Date();
+	year = date.getFullYear();
+	month = date.getMonth() + 1;
+	day = date.getDate();
+	hours = date.getHours();
+	minutes = date.getMinutes();
+	seconds = date.getSeconds();
+	
+	
+	vWeek_s = date.getDay();
+	document.getElementById("time").innerHTML = month + "月" + day + "日" + "\t" + (hours>=10?hours:"0"+hours) + ":" + (minutes>=10?minutes:"0"+minutes) +":" + (seconds>=10?seconds:"0"+seconds) + "\t" + vWeek[vWeek_s] ;
+	
+	doBizMain();
+};
+setInterval("time()",1000);
+
+</script>
+
+
+</body>
+</html>

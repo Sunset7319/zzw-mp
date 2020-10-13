@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>商品详细</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/mui.min.css">
+    <script type="text/javascript" charset="utf-8" src="js/jweixin-1.4.0.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/js/jquery1/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/js/jquery1/store.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/mui.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/cfg/initConfig.js?001"></script>
+    <script type="text/javascript" charset="utf-8" src="/js/common.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/getweixin.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/shopcommodity.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/tab.js?002"></script>
+</head>
+
+<body>
+    <div class="commodity-img">
+        <div class="mui-slider">
+            <div class="mui-slider-group mui-slider-loop">
+
+            </div>
+        </div>
+        <div class="mui-slider-indicator">
+            <div class="mui-indicator mui-active"></div>
+            <div class="mui-indicator"></div>
+        </div>
+    </div>
+    <div class="commodity-top">
+        <p class="commdity-top-title"></p>
+        <div class="commodity-top-content">
+            <div class="mui-content" style="background:#ffffff;;font-size:14px;">
+                <div class="mui-row">
+                    <div class="mui-col-sm-6 mui-col-xs-12">
+                        <li id="productTitle" class="mui-table-view-cell commdity-top-content-introduce">
+
+                        </li>
+                    </div>
+                    <div class="mui-col-sm-6 mui-col-xs-6" style="font-weight:bolder">
+                        <li class="mui-table-view-cell commdity-top-content-price">
+
+                        </li>
+                        <li class="mui-table-view-cell commdity-top-content-specification">
+
+                        </li>
+                    </div>
+                    <div class="mui-col-sm-6 mui-col-xs-6" style="padding-top: 5%;">
+                            <button type="button"  id="buyNow" class="mui-btn mui-btn-danger add-pay" style='padding:6px 0px 7px;;margin-left: 3px;top: 0;width: 88px;height: 42px;'>立即购买</button>
+                            <button type="button"  id="addTrolley" class="mui-btn mui-btn-danger add-shop" style='padding:6px 0px 7px;;margin-left: 3px;top: 0;width: 88px;height: 42px;'>加入购物车</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="commodity-photos">
+        <div class="commodity-photos-title">
+            商品详细
+        </div>
+        <div class="commodity-photos-content">
+            <img src="#" alt="" class="commodity-photos-content-first">
+        </div>
+    </div>
+    <nav class="mui-bar mui-bar-tab">
+        <a class="mui-tab-item" id="home">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </a>
+        <a class="mui-tab-item" id="shopping">
+            <span class="mui-icon iconfont icon-qicheqianlian-"><span class="mui-badge" id="theTrolleyTxt">0</span></span>
+            <span class="mui-tab-label">购物车</span>
+        </a>
+        <a class="mui-tab-item" id="my">
+            <span class="mui-icon mui-icon-contact"></span>
+            <span class="mui-tab-label">我的</span>
+        </a>
+    </nav>
+</body>
+
+</html>

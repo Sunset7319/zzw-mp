@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>订单详情</title>
+	<link rel="stylesheet" href="css/mui.min.css">
+	<link rel="stylesheet" href="css/index.css?101">
+
+	<script type="text/javascript" charset="utf-8" src="js/jweixin-1.4.0.js"></script>
+	<script type="text/javascript" charset="utf-8" src="/js/jquery1/jquery.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="/js/jquery1/store.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/mui.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="/cfg/initConfig.js?001"></script>
+	<script type="text/javascript" charset="utf-8" src="/js/common.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/getweixin.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/orderDetailForStore.js?102"></script>
+	<script type="text/javascript" charset="utf-8" src="js/tab.js?002"></script>
+</head>
+
+<body>
+	<div class="Collect-goods">
+		<div class="mui-content">
+			<div class="mui-row" style="background:#fff">
+				<div class="mui-col-sm-6 mui-col-xs-2">
+					<img src="img/Navigation.png" />
+				</div>
+				<div class="mui-col-sm-6 mui-col-xs-10">
+					<form class="mui-input-group">
+						<div class="mui-input-row">
+							<label>收货人</label>
+							<input type="text" placeholder="" id="deliverName" name="deliverName" readonly="readonly">
+						</div>
+						<div class="mui-input-row">
+							<label>联系电话</label>
+							<input type="text" placeholder="" id="deliverPhone" name="deliverPhone" readonly="readonly">
+						</div>
+						<div class="mui-input-row">
+							<label>收货店名</label>
+							<input type="text" placeholder="" id="ext1" name="ext1" readonly="readonly">
+						</div>
+						<div class="mui-input-row">
+							<label>收货地址</label>
+							<input type="text" placeholder="" id="deliverAddress" name="deliverAddress" readonly="readonly">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="Delivery">
+		<span>配送方式</span><span>送货上门</span>
+	</div>
+
+	<div id="products">
+
+	</div>	
+
+	<div class="order" style="display:none">
+		<span id="payTime"></span>
+	</div>
+
+	<div class="submitOrder">
+		<div>
+			合计：<span id="theTotalPriceTxt"></span>
+			<span id="theTotalPriceFen" style="display:none"></span>
+			支付状态：<span id="payStatusTxt"></span>
+			<br>
+			订单状态：<span id="orderStatusTxt"></span>
+		</div>
+	</div>
+
+	<div id="confirmDeliverDiv" class="submitOrder">
+		送货状态：<span id="deliverStatusTxt"></span>
+		<button type="button" class="mui-btn mui-btn-danger" id="confirmDeliver" style="float:right;line-height:2.42;">标志发货</button>
+	</div>
+
+	<div id="confirmCancelDiv" class="submitOrder" style="display:none">
+		<button type="button" class="mui-btn mui-btn-danger" id="confirmCancel" style="float:right;line-height:2.42;">确认废单</button>
+	</div>
+
+	<div id="confirmDrawbackDiv" class="submitOrder" style="display:none">
+		<button type="button" class="mui-btn mui-btn-danger" id="confirmDrawback" style="float:right;line-height:2.42;">确认退款</button>
+	</div>
+
+</body>
+
+</html>

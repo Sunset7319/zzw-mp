@@ -1,0 +1,79 @@
+html{
+  background: rgba(227, 227, 227, 0.44);;
+}
+.app{
+  position: static;
+  width: 100%;
+}
+.topInfo{
+  position: relative;
+  width: 100%;
+  height: 175px;
+  /* background: rgba(121, 252, 232, 0.728); */
+}
+#headPortrait{
+  display: block;
+  position: relative;
+  width: 85px;
+  height: 85px;
+  background: rgba(138, 252, 121, 0.728);
+  border: 2px #ffffff solid;
+  border-radius: 50%;
+  margin: 0px auto;
+  top: 45px;
+}
+#headPortrait img{
+  border-radius: 50%;
+  width: 80px;
+  margin-left: 1px;
+}
+#headPortrait span{
+  display: block;
+  margin: 5px 0 0 15px;
+}
+.infoMenu{
+  position: relative;
+  display: block;
+  width: 90%;
+  height: auto;
+  background: rgb(255, 255, 255);
+  border-radius: 20px;
+  margin: 20px auto 0px;
+}
+.contentTop{
+  width: 90%;
+  height: 60px;
+  border-bottom: 1px rgba(188, 186, 186, 0.54) solid;
+  display: block;
+  margin: 0 auto;
+}
+.contentBottom{
+  width: 90%;
+  height: 60px;
+  display: block;
+  margin: 0 auto;
+}
+.content-icon{
+  display: block;
+  position: relative;
+  top: 19px;
+  left: 5px;
+}
+.contentTop .iconfont{
+  font-size: 27px;
+}
+.contentBottom .iconfont{
+  font-size: 27px;
+}
+.content-tab-label{
+  font-size: 18px;
+  display: inline-block;
+  position: relative;
+  left: 36px;
+}
+.content-tab-money{
+  font-size: 19px;
+  display: inline-block;
+  position: absolute;
+  right: 36px;
+}

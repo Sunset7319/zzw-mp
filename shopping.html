@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title></title>
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/index.css?101">
+		<script type="text/javascript" charset="utf-8" src="js/jweixin-1.4.0.js"></script>
+		<script type="text/javascript" charset="utf-8" src="/js/jquery1/jquery.min.js"></script>		
+		<script type="text/javascript" charset="utf-8" src="/js/jquery1/store.js"></script>		
+		<script type="text/javascript" charset="utf-8" src="js/mui.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="/cfg/initConfig.js?100"></script>
+		<script type="text/javascript" charset="utf-8" src="/js/common.js"></script>		
+		<script type="text/javascript" charset="utf-8" src="js/getweixin.js?100"></script>	
+		<script type="text/javascript" charset="utf-8" src="js/shopping.js?v=0002"></script>		
+		<script type="text/javascript" charset="utf-8" src="js/tab.js?100"></script>		
+			
+	</head>
+	<body>
+	<div class="mui-content">
+		<div class="Collect-goods">
+				<div class="mui-content">
+					<div class="mui-row" style="background:#fff;">
+							<div class="mui-col-sm-6 mui-col-xs-2">
+									<img src="img/Navigation.png" />
+							</div>
+							<div class="mui-col-sm-6 mui-col-xs-10">
+									<form class="mui-input-group">
+											<div class="mui-input-row">
+												<label>收    货   人</label>
+											<input type="text"  placeholder="" id="deliverName" name="deliverName" value="">
+											</div>
+											<div class="mui-input-row">
+												<label>联系电话</label>
+												<input type="text"  placeholder="" id="deliverPhone" name="deliverPhone"  value="">
+											</div>
+											<div class="mui-input-row">
+												<label>收货店名</label>
+												<input type="text"  placeholder="" id="ext1" name="ext1"  value="">
+											</div>
+											<div class="mui-input-row">
+												<label>收货地址</label>
+												<input type="text"  placeholder="" id="deliverAddress" name="deliverAddress"  value="">
+											</div>
+									</form>
+							</div>
+					</div>
+				</div>
+		</div>
+
+	
+		<div id="products">
+			<div class="productItem">
+				<div class="mui-row">
+					<div class="mui-col-sm-6 mui-col-xs-8">
+						<img src="" id="goods-icon" />
+						<div id="goods-name"></div>
+						<div id="goods-price"></div>
+						<div id="goods-unit" style="display:none"></div>
+						<div id="goods-specification" style="display:none"></div>
+					</div>
+					<div class="mui-col-sm-6 mui-col-xs-4" style="position:relative;height:84px">
+						<div class="mui-numbox" data-numbox-min='1' style="margin: auto;  position: absolute;  top: 0; left: 0; bottom: 0; right: 0;">
+							<button class="mui-btn mui-numbox-btn-minus" type="button" id="reduce">-</button>
+							<input id="totle" class="mui-input-numbox" type="number" value="1" />
+							<button class="mui-btn mui-numbox-btn-plus" type="button" id="add">+</button>
+						</div>
+					</div>	
+					<div id="unitPrice" style="display:none"></div>
+				</div>			
+			</div>
+		</div>
+
+		<div class="order">
+			<label><input type="radio" name="payTime" value="PAY_NOW" checked/><span id="TEXT_CN_PAY_NOW"></span></label>
+			<label><input type="radio" name="payTime" value="PAY_NEXT" /><span id="TEXT_CN_PAY_NEXT"></span></label>
+		</div>
+		
+		<div class="submitOrder">
+			<div class="mui-content">
+				<div class="mui-row" style="background:#fff;height: 100px;">
+					<div class="mui-col-sm-6 mui-col-xs-9">
+						<div id="totle-price">合计：<span id="theTotalPriceTxt"></span><span id="theTotalPriceFen" style="display:none"></span></div>
+					</div>
+					<div class="mui-col-sm-6 mui-col-xs-3">
+						<button type="button" data-loading-text="支付中" class="mui-btn mui-btn-danger" id="pay" style="float:right;line-height:2.42;">提交订单</button>
+					</div>
+				</div>
+			</div>		
+		</div>
+	</div>
+	
+		<nav class="mui-bar mui-bar-tab" id="footer">
+				<a class="mui-tab-item" id="home">
+					<span class="mui-icon mui-icon-home"></span>
+					<span class="mui-tab-label">首页</span>
+				</a>
+				<a class="mui-tab-item" id="shopping">
+						<span class="mui-icon iconfont icon-qicheqianlian- mui-active"><span class="mui-badge" id="theTrolleyTxt">0</span></span>
+					<span class="mui-tab-label">购物车</span>
+				</a>
+	
+				<a class="mui-tab-item" id="my">
+					<span class="mui-icon mui-icon-contact"></span>
+					<span class="mui-tab-label">我的</span>
+				</a>
+			</nav>
+		
+	</body>
+</html>

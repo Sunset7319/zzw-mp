@@ -1,0 +1,73 @@
+html{
+  background: rgba(227, 227, 227, 0.44);;
+}
+p{
+  margin: 0;
+  padding: 0; 
+}
+.app{
+  position: static;
+  width: 100%;
+}
+.changeContent {
+  width: 90%;
+  height: 120px;
+  display: flex;
+  padding: 16px;
+  margin:20px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  background: #fbfbfb;
+  color: #666666;
+}
+.btn {
+  width: 80px;
+  height: 40px;
+  line-height: 40px;
+  
+  background: #ffffff;
+  color: #FF7400;
+  
+  border: 1px solid #d8d8d8;
+  border-radius: 4px;
+  
+  text-align: center;
+  outline: none;
+}
+.change-body .change-priceRed {
+  position: relative;
+  text-align: right;
+  top: 43%;
+  font-size: 22px;
+  font-weight: 500;
+  color: rgb(255, 0, 0);
+}
+.change-body .change-priceGreen {
+  position: relative;
+  text-align: right;
+  top: 43%;
+  font-size: 22px;
+  font-weight: 500;
+  color: rgb(0, 255, 0);
+}
+.change-body .change-txt {
+  font-size: 17px;
+  width: 220px;
+  margin-bottom: 10px;
+}
+.change-body .change-date {
+  color: #999999;
+  font-size: 14px;
+  margin-bottom: 13px;
+}
+.change-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.change-control { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,182 @@
+html{
+  background: #fff;
+}
+.order{
+  margin-bottom: 60px;
+  background: #fff;
+}
+.order-not{
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+}
+.order-not-font{
+  line-height: 60px;
+}
+.order-not-button{
+  color: #fff;
+  border: 0;
+  background: #68a05b;
+  padding: 10px 30px;
+  font-size: 16px;
+}
+.order-info{
+  width: calc(100% - 20px);
+  margin: 10px 10px 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px #ddd;
+}
+.order-info-header{
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+}
+.order-info-header-shopIcon{
+  position: absolute;
+  margin-top: 4px;
+  width: 20px;
+  border-radius: 5px;
+}
+.order-info-header-shopName{
+  margin-left: 25px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.order-info-header-shopOrderTime{
+  font-size: 9px;
+}
+.order-info-header-shopMealNumber{
+  font-size: 12px;
+  position: absolute;
+  right: 0;
+  font-weight: bold;
+}
+.order-info-header-shopMealNumber span{
+  color: #de9c36;
+}
+.order-info-center{
+
+}
+.order-info-center-commodity{
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  overflow: hidden;
+}
+.order-info-center-commodity-info{
+  width: 65%;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.order-info-center-commodity-info img{
+  width: 50px;
+  border-radius: 5px;
+  position: absolute;
+  top: 15px;
+  margin-left: 5px;
+}
+.order-info-center-commodity-info span{
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 60px;
+  line-height: 80px;
+}
+.order-info-center-commodity-num{
+  float: left;
+  width: 10%;
+  text-align: right;
+  font-size: 12px;
+}
+.order-info-center-commodity-price{
+  float: left;
+  width: 25%;
+  text-align: right;
+  font-size: 12px;
+}
+.order-info-center-commodity-price span{
+  font-size: 9px;
+  font-weight: bold;
+}
+.order-info-center-commodityTotal{
+  font-size: 12px;
+  text-align: right;
+}
+.order-info-center-commodityTotal span{
+  font-weight: bold;
+}
+.order-info-center-commodityTotal span span{
+  font-size: 9px;
+}
+.order-info-footer{
+  height: 55px;
+}
+.order-info-footer-process{
+  width: 65%;
+  float: left;
+}
+.order-info-footer-process1{
+  font-size: 10px;
+  position: relative;
+  width: 55%;
+  float: left;
+}
+.order-info-footer-process1:before{
+  content: '';
+  position: absolute;
+  top: 17px;
+  left: 35%;
+  width: 70px;
+  background: #7fb347;
+  height: 1px;
+}
+.order-info-footer-process1 span{
+  font-size: 32px;
+  color: #7fb347;
+}
+.order-info-footer-process1-font{
+  font-size: 10px;
+  font-weight: bold;
+}
+.order-info-footer-process2{
+  font-size: 10px;
+  position: relative;
+  width: 45%;
+  float: left;
+  padding-left: 13px;
+}
+.order-info-footer-process2-window{
+  width: 32px;
+  height: 32px;
+  background: #866825;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 32px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0px 1px 10px #866825;
+}
+.order-info-footer-process2-font{
+  font-size: 10px;
+  font-weight: bold;
+}
+.order-info-footer-takeMeal{
+  width: 35%;
+  float: left;
+}
+.order-info-footer-takeMeal button{
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  color: #7fb347;
+  font-size: 12px;
+  float: right;
+  margin-top: 20px;
+}

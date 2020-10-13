@@ -1,0 +1,138 @@
+html{
+    background: rgb(255, 255, 255);
+}
+.app{
+    position: static;   
+    width: 100%;
+}
+.topModule{
+    position: relative;
+    width: 100%;
+    background-image: linear-gradient(#f2f2f2, #fafafa, #f2f2f2);
+    padding: 25px 0;
+}
+.topContent{
+    position: relative;
+    width: 93%;
+    height: 100px;
+    background-image: linear-gradient(#ffd900, #fff700, #ffd900);
+    border-radius: 10px;
+    margin: 0px auto;
+} 
+.topContent-label{
+    font-size: 24px;
+    display: inline-block;
+    /* line-height: 156px; */
+    margin-top: 10%;
+    margin-left: 30px;
+}
+.userBalance{
+    font-size: 36px;
+    display: inline-block;
+    /* line-height: 156px; */
+    margin-top: 10%;
+    float: right;
+    margin-right: 50px;
+}
+.bottomModule{
+    width: 100%;
+    height: 350px;
+    background: white;
+}
+.bottomModule-label{
+    display: block;
+    position: relative;
+    top: 20px;
+    left: 24px;
+    font-size: 14px;
+    color: #636363;
+}
+.bottomContent{
+    position: relative;
+    width: 87%;
+    margin: 22px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.commodity{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 95px;
+    border: 1px solid rgb(184, 184, 184);
+    border-radius: 5px;
+    margin-top: 12px;
+    margin-right: 11px;
+    font-size: 23px;
+    text-align: center;
+}
+.commodity p:nth-child(1){
+    font-size: 23px;
+    color: #000;
+    margin: 0;
+}
+.commodity p:nth-child(2){
+    font-size: 13px;
+    color: #FF0000;
+    margin: 0;
+    margin-top: 3px;
+    letter-spacing: 1px;
+}
+.commodity input{
+    border: 0;
+    height: 94px;
+    padding: 0;
+    text-align: center;
+    font-size: 18px;
+    margin: 0;
+}
+.commodity:nth-child(3n+3){
+    margin-right: 0px;
+}
+
+.rechargeMask{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: none;
+  }
+  .recharge{
+    width: 80%;
+    background: #fff;
+    position: fixed;
+    top: 30%;
+    left: 10%;
+    z-index: 9;
+    border-radius: 10px;
+    overflow: hidden;
+    padding-top: 15px;
+  }
+  .recharge-item{
+    position: relative;
+    width: 80%;
+    height: 50px;
+    display: block;    
+    margin: 0 auto 20px;
+  }
+  .recharge-item span{
+    font-size: 22px;
+    line-height: 50px;
+  }
+  .recharge-item .rechargeIcon{
+    display: inline-block;
+    font-size: 28px;
+    top: 2px;
+    position: relative;
+  }
+  .rechargeIcon{
+    width: 1em; 
+    height: 1em; 
+    vertical-align: -0.15em; 
+    fill: currentColor; 
+    overflow: hidden; 
+  }

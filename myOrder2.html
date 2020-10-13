@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>我的订单</title>
+	<link rel="stylesheet" href="css/mui.min.css">
+	<link rel="stylesheet" href="icon/iconfont.css">
+	<link rel="stylesheet" href="css/myOrder2.css">
+	<!-- <link rel="stylesheet" href="css/common.css?20200731"> -->
+	<script type="text/javascript" charset="utf-8" src="js/jweixin-1.4.0.js"></script>
+	<script type="text/javascript" charset="utf-8" src="./js/jquery1/jquery.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="./js/jquery1/store.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/mui.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="./cfg/initConfig.js?100"></script>
+	<script type="text/javascript" charset="utf-8" src="./js/common.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/getweixin.js?100"></script>
+	<script type="text/javascript" charset="utf-8" src="js/myOrder2.js?102"></script>
+	<script type="text/javascript" charset="utf-8" src="js/tab.js?002"></script>
+	<script>
+		document.write('<link rel="stylesheet" href="css/common.css?v=' + new Date().getTime() + '">')
+	</script>
+</head>
+
+<body>
+	<div class="order"> 
+		<div class="order-not">
+			<div class="order-not-font">订单仓库空空如也</div>
+			<button class="order-not-button">去下一单</button>
+		</div>
+		<div class="order-info">
+			<div class="order-info-header">
+				<img src="http://www.zzwct.com/images/a1594f7c20a54cff90d0f9086bc412f4.jpg" class="order-info-header-shopIcon">
+				<span class="order-info-header-shopName">清华研究院</span>
+				<span class="order-info-header-shopOrderTime">大约1个月前</span>
+				<span class="order-info-header-shopMealNumber">待出餐<span>(取餐号001)</span></span>
+			</div>
+			<div class="order-info-center">
+				<div class="order-info-center-commodity">
+					<div class="order-info-center-commodity-info">
+							<img src="http://www.zzwct.com/images/a1594f7c20a54cff90d0f9086bc412f4.jpg">
+							<span>香菇蒸滑鸡·蒜蓉娃娃菜</span>
+					</div>
+					<div class="order-info-center-commodity-num">x1</div>
+					<div class="order-info-center-commodity-price"><span>￥</span>0.01</div>
+				</div>
+				<div class="order-info-center-commodityTotal">共一份餐品，合计：<span><span>￥</span>0.01</span></div>
+			</div>
+			<div class="order-info-footer">
+				<div class="order-info-footer-process">
+					<div class="order-info-footer-process1">
+							<span class="mui-icon iconfont el-icon-ch-dui"></span>
+							<div class="order-info-footer-process1-font">已支付</div>
+					</div>
+					<div class="order-info-footer-process2">
+							<div class="order-info-footer-process2-window">1</div>
+							<div class="order-info-footer-process2-font">取餐窗口</div>
+					</div>
+				</div>
+				<div class="order-info-footer-takeMeal"><button>确认取餐</button></div>
+			</div>
+		</div>
+		<div class="order-info">
+			<div class="order-info-header">
+				<img src="http://www.zzwct.com/images/a1594f7c20a54cff90d0f9086bc412f4.jpg" class="order-info-header-shopIcon">
+				<span class="order-info-header-shopName">清华研究院</span>
+				<span class="order-info-header-shopOrderTime">大约1个月前</span>
+				<span class="order-info-header-shopMealNumber">待出餐<span>(取餐号001)</span></span>
+			</div>
+			<div class="order-info-center">
+				<div class="order-info-center-commodity">
+					<div class="order-info-center-commodity-info">
+							<img src="http://www.zzwct.com/images/a1594f7c20a54cff90d0f9086bc412f4.jpg">
+							<span>香菇蒸滑鸡·蒜蓉娃娃菜</span>
+					</div>
+					<div class="order-info-center-commodity-num">x1</div>
+					<div class="order-info-center-commodity-price"><span>￥</span>0.01</div>
+				</div>
+				<div class="order-info-center-commodityTotal">共一份餐品，合计：<span><span>￥</span>0.01</span></div>
+			</div>
+			<div class="order-info-footer">
+				<div class="order-info-footer-process">
+					<div class="order-info-footer-process1">
+							<span class="mui-icon iconfont el-icon-ch-dui"></span>
+							<div class="order-info-footer-process1-font">已支付</div>
+					</div>
+					<div class="order-info-footer-process2">
+							<div class="order-info-footer-process2-window">1</div>
+							<div class="order-info-footer-process2-font">取餐窗口</div>
+					</div>
+				</div>
+				<div class="order-info-footer-takeMeal"><button>确认取餐</button></div>
+			</div>
+		</div>
+		<div class="order-info">
+			<div class="order-info-header">
+				<img src="http://www.zzwct.com/images/a1594f7c20a54cff90d0f9086bc412f4.jpg" class="order-info-header-shopIcon">
+				<span class="order-info-header-shopName">清华研究院</span>
+				<span class="order-info-header-shopOrderTime">大约1个月前</span>
+				<span class="order-info-header-shopMealNumber">待出餐<span>(取餐号001)</span></span>
+			</div>
+			<div class="order-info-center">
+				<div class="order-info-center-commodity">
+					<div class="order-info-center-commodity-info">
+							<img src="http://www.zzwct.com/images/a1594f7c20a54cff90d0f9086bc412f4.jpg">
+							<span>香菇蒸滑鸡·蒜蓉娃娃菜</span>
+					</div>
+					<div class="order-info-center-commodity-num">x1</div>
+					<div class="order-info-center-commodity-price"><span>￥</span>0.01</div>
+				</div>
+				<div class="order-info-center-commodityTotal">共一份餐品，合计：<span><span>￥</span>0.01</span></div>
+			</div>
+			<div class="order-info-footer">
+				<div class="order-info-footer-process">
+					<div class="order-info-footer-process1">
+							<span class="mui-icon iconfont el-icon-ch-dui"></span>
+							<div class="order-info-footer-process1-font">已支付</div>
+					</div>
+					<div class="order-info-footer-process2">
+							<div class="order-info-footer-process2-window">1</div>
+							<div class="order-info-footer-process2-font">取餐窗口</div>
+					</div>
+				</div>
+				<div class="order-info-footer-takeMeal"><button>确认取餐</button></div>
+			</div>
+		</div>
+	</div>
+	<nav class="mui-bar mui-bar-tab">
+		<a class="mui-tab-item" id="home">
+			<span class="mui-icon mui-icon-home"></span>
+			<span class="mui-tab-label">首页</span>
+		</a>
+		<a class="mui-tab-item outerCircle" id="my">
+			<div class="touxiang">
+				<!-- <img src="img/avatar.jpg" /> -->
+				<div>申</div>
+			</div>
+		</a>
+		<a class="mui-tab-item mui-active" id="my">
+			<span class="mui-icon iconfont el-icon-ch-dingdan"></span>
+			<span class="mui-tab-label">订单</span>
+		</a>
+	</nav>
+</body>
+
+</html>

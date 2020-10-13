@@ -1,0 +1,290 @@
+.orderDetail {
+  height: 400px;
+  background: linear-gradient(#629c23, #efeff4);
+  padding: 10px;
+}
+
+.orderDetail-WaitingForMeal {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 50px;
+}
+
+.orderDetail-takeMeal button {
+  border: 1px solid #fff;
+  background: none;
+  color: #fff;
+}
+
+.orderDetail-window {
+  height: 150px;
+  /* padding-top: 10px; */
+  /* text-align: center; */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orderDetail-window-Square {
+  width: 130px;
+  height: 130px;
+  background: #fff;
+  border-radius: 50%;
+  /* margin: 0 auto; */
+  color: #6b9b2e;
+  float: right;
+  text-align: center;
+
+}
+
+.orderDetail-window-circle {
+  float: right;
+  width: 127px;
+  height: 127px;
+  background: #fff;
+  color: #1bb555;
+  text-align: center;
+  margin-left: 35px;
+  overflow-y: auto;
+}
+.orderDetail-window-circle div{
+  min-height: 67px;
+  font-size: 24px;
+  word-break: break-all;
+}
+.orderDetail-circle {
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.orderDetail-circle span {
+  color: #c92325;
+  font-weight: bold;
+  font-size: 32px
+}
+
+.orderDetail-circle span:first-child {
+  margin-right: 32px
+}
+
+.orderDetail-circlemid {
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.orderDetail-circlemid span {
+  color: #c92325;
+  font-weight: bold;
+  font-size: 32px
+}
+
+.orderDetail-circlemid span:first-child {
+  margin-right: 66px
+}
+
+.orderDetail-circlecen {
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.orderDetail-circlecen span {
+  color: #000000;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.orderDetail-window-Square span:first-child,
+.orderDetail-window-circle span:first-child {
+  display: block;
+  line-height: 60px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.orderDetail-window-Square span:last-child{
+  font-size: 50px;
+}
+.orderDetail-window-circle span:last-child {
+  font-size: 24px;
+}
+
+.orderDetail-prompt {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 10px;
+  color: #fff;
+}
+
+.orderDetail-orderInfo {
+  margin-top: -50px;
+  z-index: 99;
+  margin: -115px 5px 60px;
+  /* border: 1px solid #ddd; */
+}
+
+.orderDetail-orderInfo-commodity {
+  /* height: 120px; */
+  background: #fff;
+}
+
+.orderDetail-orderInfo-commodity-shop {
+  padding: 10px;
+  border-bottom: 1px dashed #ddd;
+  position: relative;
+  height: 70px;
+}
+
+.orderDetail-orderInfo-commodity-img {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+
+.orderDetail-orderInfo-commodity-shopName {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 50px;
+  margin-left: 60px;
+}
+
+.orderDetail-orderInfo-commodity-contactShop {
+  font-size: 12px;
+  float: right;
+  line-height: 50px;
+  color: #ff8606;
+  font-weight: bold;
+}
+
+.orderDetail-orderInfo-commodity-shop2 {
+  padding: 10px;
+  height: 70px;
+}
+
+.orderDetail-orderInfo-commodity-shop2-left {
+  width: 65%;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.orderDetail-orderInfo-commodity-shop2-name {
+  font-size: 14px;
+  line-height: 50px;
+  margin-left: 60px;
+}
+
+.orderDetail-orderInfo-commodity-shop2-right {
+  width: 35%;
+  float: left;
+}
+
+.orderDetail-orderInfo-commodity-shop2-num {
+  font-size: 9px;
+  font-weight: bold;
+  line-height: 50px;
+  margin-left: 20px;
+}
+
+.orderDetail-orderInfo-commodity-shop2-price {
+  font-size: 12px;
+  float: right;
+  line-height: 50px;
+  font-weight: bold;
+}
+
+.orderDetail-orderInfo-commodity-shop3 {
+  padding: 10px;
+  height: 50px;
+}
+
+.orderDetail-orderInfo-commodity-shop3-title {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.orderDetail-orderInfo-commodity-shop3-price {
+  color: red;
+  font-size: 12px;
+  float: right;
+  font-weight: bold;
+}
+
+.orderDetail-orderInfo-commodity-shop3-price span {
+  font-size: 9px;
+}
+
+.orderDetail-orderInfo-commodity-shop3-price2 {
+  font-size: 14px;
+  float: right;
+  font-weight: bold;
+}
+
+.orderDetail-orderInfo-info {
+  height: 130px;
+  padding: 10px;
+  margin-top: 20px;
+  background: #fff;
+}
+
+.orderDetail-orderInfo-info-font {
+  font-size: 14px;
+  font-weight: bold;
+  height: 40px;
+  line-height: 40px;
+}
+
+.orderDetail-orderInfo-info-content {
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+}
+
+.orderDetail-orderInfo-info-content-font {
+  float: right;
+}
+
+@media screen and (max-width: 320px) {
+  .orderDetail-window-Square {
+    width: 130px;
+    height: 130px;
+    background: #fff;
+    border-radius: 50%;
+    margin: 0 auto;
+    color: #629c23;
+  }
+
+  .orderDetail-window-circle {
+    float: right;
+    width: 120px;
+    height: 120px;
+    background: #fff;
+    margin: 5px 15px 5px 0;
+    border-radius: 5px;
+  }
+}
+
+  .orderDetailReturnBtn{
+    display: block;
+    width: 85%;
+    height: 50px;
+    background: #6b9b2e;
+    border-radius: 20px;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: bolder;
+    line-height: 50px;
+    letter-spacing: 8px;
+    text-align: center;
+    margin: 20px auto 0;
+    padding-left: 8px;
+  }

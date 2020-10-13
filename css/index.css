@@ -1,0 +1,264 @@
+.mui-content {
+  margin-bottom: 80px;
+}
+
+.mainTitle {
+  display: inline-block;
+  margin: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: YouYuan;
+}
+
+.mainSubtitle{
+  position: absolute;
+  display: inline-block;
+  right: 14px;
+  line-height: 40px;
+  font-size: 22px;
+}
+
+.mainSubtitle .iconfont{
+  font-size: 22px;
+  position: absolute;
+  top: 10px;
+  right: 70px;
+}
+
+.subtitleLable{
+  font-size: 17px;
+}
+
+.leftContent{
+  width: 18%;
+  padding-top: 5px;
+  left: 0;
+  position: fixed;
+}
+
+.leftContentBtn1{
+  width: calc(100% - 8px);
+  min-height: 35px;
+  border: 1px #00b910 solid;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #00b910;
+  text-align: center;
+  margin: 0px 0 10px 6px;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.leftContentBtn20{
+  width: calc(100% - 8px);
+  min-height: 35px;
+  border: 1px #000000 solid;
+  border-radius: 10px;
+  font-size: 15px;
+  text-align: center;
+  margin: 0 0 10px 6px;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.leftContentBtn21{
+  width: calc(100% - 8px);
+  min-height: 35px;
+  border: 1px #000000 solid;
+  border-radius: 10px;
+  font-size: 15px;
+  text-align: center;
+  margin: 0 0 10px 6px;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.leftContentBtn22{
+  width: calc(100% - 8px);
+  min-height: 35px;
+  border: 1px #000000 solid;
+  border-radius: 10px;
+  font-size: 15px;
+  text-align: center;
+  margin: 0 0 10px 6px;
+  padding: 10px 0;
+  cursor: pointer;
+}
+.rightContent{
+    width: 82%;
+    position: absolute;
+    left: 18%;
+}
+.rightContentStore3{
+    width: 100%;
+    position: absolute;
+}
+
+.advence {
+  text-align: center;
+  font-weight: bold;
+  color: red;
+}
+
+.commodity-content {
+  background: #fff;
+  padding: 0 0 0 0;
+}
+
+.commodity {
+  width: calc(100% - 10px);
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  float: left;
+  margin: 0 0px 12px 8px;
+  box-shadow: 1px 1px 3px #eee;
+}
+
+.commodity-hot {
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 14px;
+  color: red;
+  font-weight: bold;
+}
+
+.commodity-hot2 {
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 14px;
+  color: #7ebf8a;
+  font-weight: bold;
+}
+
+.commodity-img {
+  overflow: hidden;
+}
+
+.commodity-info {
+  padding: 5px;
+  height: 75px;
+}
+
+.commodity-info-title {
+  font-size: 20px;
+  height: 28px;
+}
+
+.commodity-info-title-name {
+  /* max-width: calc(100% - 14px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; */
+  text-align: center;
+}
+
+/* .commodity-info-title img {
+  width: 20px;
+  height: 20px;
+  vertical-align: bottom;
+} */
+.commodity-info-title-hot{
+  width: 20px;
+  height: 20px;
+  vertical-align: bottom;
+}
+.commodity-info-price {
+  height: 35px;
+  line-height: 35px;
+}
+
+.commodity-info-sold-out {
+  font-size: 12px;
+  color: red;
+  float: right;
+}
+
+@media screen and (min-width:300px) and (max-width:350px) {
+  .commodity-info-price span {
+    font-size: 15px;
+    color: red;
+  }  
+}
+@media screen and (min-width:351px) and (max-width:420px) {
+  .commodity-info-price span {
+    font-size: 18px;
+    color: red;
+  }  
+}
+@media screen and (min-width:421px){
+  .commodity-info-price span {
+    font-size: 24px;
+    color: red;
+  }  
+}
+/* .commodity-info-price span {
+  font-size: 13px;
+  color: red;
+} */
+
+.commodity-info-price-identifier {
+  font-size: 9px;
+}
+
+.commodity-info-price button {
+  float: right;
+  background: #68a05b;
+  color: #fff;
+  width: 100px;
+  border: 0;
+}
+
+.commodity-info-price button:disabled {
+  background: gray !important;
+}
+
+.inTheEnd {
+  color: #efcccc;
+  font-size: 13px;
+  text-align: center;
+  background: #fff;
+  position: relative;
+}
+
+.inTheEnd:before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 36px;
+  width: 25%;
+  background: #efcccc;
+  height: 1px;
+}
+
+.inTheEnd:after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 36px;
+  width: 25%;
+  background: #efcccc;
+  height: 1px;
+}
+
+/*toast信息提示*/
+.mui-toast-container {
+  bottom: 50% !important;
+}
+.recharge{
+  width: 24px;
+  background: red;
+  border-radius: 4px;
+  color: #fff;
+  height: 130px;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  padding: 10px 4px;
+}
+
+/* .mui-toast-message {background: url(/app/themes/default/images/toast.png) no-repeat center 10px #000; opacity: 0.6; color: #fff; width: 180px; padding: 70px 5px 10px 5px;} */

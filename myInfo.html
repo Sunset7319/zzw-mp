@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>我的</title>
+	<link rel="stylesheet" href="css/mui.min.css">
+	<link rel="stylesheet" href="icon/iconfont.css">
+	<link rel="stylesheet" href="css/myInfo.css?20001">
+	<!-- <link rel="stylesheet" href="css/common.css?20200731"> -->
+	<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_1743090_1ofriys6kx9.css">
+
+	<script type="text/javascript" charset="utf-8" src="js/jweixin-1.4.0.js"></script>
+	<script type="text/javascript" charset="utf-8" src="./js/jquery1/jquery.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="./js/jquery1/store.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/mui.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="./cfg/initConfig.js?100"></script>
+	<script type="text/javascript" charset="utf-8" src="./js/common.js?001"></script>
+	<script type="text/javascript" charset="utf-8" src="js/openMidas.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/getweixin.js?100"></script>
+	<script type="text/javascript" charset="utf-8" src="js/myInfo.js?202009212"></script>
+	<script type="text/javascript" charset="utf-8" src="js/tab.js?2007"></script>
+	<script>
+		document.write('<link rel="stylesheet" href="css/common.css?v=' + new Date().getTime() + '">')
+		document.write('<script src="js/trolley.js?v=' + new Date().getTime() + '"><\/script>')
+	</script>
+</head>
+
+<body>
+	<div class="app">
+		<div class="topInfo">
+			<div id="headPortrait"></div>
+		</div>
+		<div class="mui-bar mui-bar-tab infoMenu">
+			<a id="myRecharge" class="contentTop" >
+				<span class="content-icon iconfont icon-jine"></span>
+				<span class="content-tab-label">充&emsp;&emsp;值</span>
+			</a>
+			<a id="myMoney" class="contentTop" >
+				<span class="content-icon iconfont icon-jine"></span>
+				<span class="content-tab-label">我的余额</span>
+				<span class="content-tab-money">0元</span>
+			</a>
+			<a id="myOrders" class="contentTop" >
+				<span class="content-icon iconfont icon-icon--"></span>
+				<span class="content-tab-label">我的订单</span>
+			</a>
+			<a id="business" class="contentTop" style="display: none;">
+				<span class="content-icon iconfont icon-icon--"></span>
+				<span class="content-tab-label">管理平台</span>
+			</a>
+			<a id="myStorage" class="contentBottom" >
+				<span class="content-icon iconfont icon-icon--"></span>
+				<span class="content-tab-label">清除缓存</span>
+			</a>
+		</div>
+	</div>
+	<div class="mask" onclick="closeCarMask()"></div>
+	<div class="car">
+		<div class="car-title">购物车<img src="./img/close.svg" onclick="closeCarMask()" /></div>
+		<div id="carListDiv" class="car-carList">
+			
+		</div>
+		<div class="car-settlement">
+			<span><span id="totalFoods"></span>个菜共<span id="totalFoodBowls">0</span>碗&nbsp;&nbsp;总金额：<span>￥</span><span id="totalMoney"></span></span>
+			<button id="paySubmit" onclick="doBuy()">立即支付</button>
+		</div>
+	</div>
+	<nav class="mui-bar mui-bar-tab">
+		<a class="mui-tab-item" id="home">
+			<span class="mui-icon mui-icon-home"></span>
+			<span class="mui-tab-label">首页</span>
+		</a>
+		<a class="mui-tab-item outerCircle" id="myCar">
+			<div id="end" class="touxiang">
+				<!-- <div id="lastname"></div> -->
+				<img src="./img/shopCar.png" alt="">
+				<span id="totalCardNum" class="subscript" title="">0</span>
+			</div>
+		</a>
+		<a class="mui-tab-item  mui-active" id="my">
+			<span class="mui-icon iconfont icon-touxiang" ></span>
+			<span class="mui-tab-label">我的</span>
+		</a>
+	</nav>
+	
+</body>
+
+</html>

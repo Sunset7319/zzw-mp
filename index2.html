@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title class="zzwTitle">蒸滋味</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="cache-control" content="max-age=0" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="expires" content="0" />
+	<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+	<meta http-equiv="pragma" content="no-cache" />
+	<link rel="stylesheet" href="css/mui.min.css">
+	<link rel="stylesheet" href="css/imageview.css" />
+	<link rel="stylesheet" href="css/mui.imageviewer.css" />
+	<link rel="stylesheet" href="css/icons-extra.css?201">
+	<link rel="stylesheet" href="icon/iconfont.css?201">
+	<link rel="stylesheet" href="css/index.css?2026" />
+  <link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_1743090_y0gci3lexjg.css">
+	
+	<script type="text/javascript" charset="utf-8" src="js/jweixin-1.4.0.js?v=20200930"></script>
+	<script type="text/javascript" charset="utf-8" src="js/jquery1/jquery.min.js?v=20200930"></script>
+	<script type="text/javascript" charset="utf-8" src="js/jquery1/store.js?v=20200930"></script>
+	<script type="text/javascript" charset="utf-8" src="js/mui.min.js?v=20200930"></script>
+	<script type="text/javascript" charset="utf-8" src="js/mui.imageViewer.js?v=20200930" ></script>
+	<script type="text/javascript" charset="utf-8" src="js/mui.previewimage.js?v=20200930" ></script>
+	<script type="text/javascript" charset="utf-8" src="js/mui.zoom.js?v=20200930" ></script>
+	<script type="text/javascript" charset="utf-8" src="js/shoppingcarfly.js?v=20200930"></script>
+	<script type="text/javascript" charset="utf-8" src="dist/jquery.fly.min.js?v=20200930"></script>
+	<script type="text/javascript" charset="utf-8" src="icon/icon2/iconfont.js?v=20200930"></script>
+	<script type="text/javascript" charset="utf-8" src="cfg/initConfig.js?v=20200930"></script>
+	<script type="text/javascript" charset="utf-8" src="js/common.js?v=20200930"></script>
+	<script type="text/javascript" charset="utf-8" src="js/openMidas.js?v=20200930"></script>
+	<script type="text/javascript" charset="utf-8" src="js/getweixin.js?v=20200930"></script>
+	<script type="text/javascript" charset="utf-8" src="js/getweixiao.js?v=20200930"></script>
+	<script type="text/javascript" charset="utf-8" src="js/tab.js?v=20200930"></script>
+	<script type="text/javascript" charset="utf-8" src="js/vconsole.min.js?v=20200930"></script>
+	<script>
+		// init vConsole
+		var vConsole = new VConsole();
+		document.write('<link rel="stylesheet" href="css/common.css?v=' + new Date().getTime() + '">')
+		document.write('<script src="js/index2.js?v=' + new Date().getTime() + '"><\/script>')
+		document.write('<script src="js/trolley2.js?v=' + new Date().getTime() + '"><\/script>')
+	</script>
+</head>
+
+<body style="background: #fff;position: relative;">
+	<div id="userOpenId" style="display:none"></div>
+	<div id="cardNumber" style="display:none"></div>
+	<div class="mainTitle"><span id="storeName"></span>今日菜单</div>
+	<div class="mainSubtitle">
+		<span class="mui-icon iconfont icon-qiehuanzhanghao" ></span>
+		<span class="subtitleLable" onclick='cutoverStoreMask()'>切换店铺</span>
+	</div>
+	
+	<div class="leftContent"></div>
+	<div id="theMainContent" class="rightContent">
+		<div class="mui-content">
+			<div class="mui-row commodity-content" id="commodity"></div>
+			<div class="inTheEnd">到底了哦</div>
+		</div>
+	</div>
+	<!-- <div class="advence">本周新菜：腊味合蒸 、狮子头、蛋饺</div> -->
+	
+	<div class="mask" onclick="closeCarMask()"></div>
+	<div class="car">
+		<div class="car-title">购物车<img src="./img/close.svg" onclick="closeCarMask()" /></div>
+		<div id="carListDiv" class="car-carList"></div>
+		<div class="car-settlement">
+			<span><span id="totalFoods"></span>个菜共<span id="totalFoodBowls">0</span>碗&nbsp;&nbsp;总金额：<span>￥</span><span id="totalMoney"></span></span>
+			<button id="paySubmit" onclick="doBuy()">立即下单</button>
+		</div>
+	</div>
+
+	<div class="storeMask">
+		<div class="store"></div>
+	</div>
+
+	<div id="paySelect" class="payMask">
+		<div class="pay">
+			<div class="pay-item" id="weixinDiv" style="display:none" onclick="doSelectThisPayMode('weixin')">
+				<svg class="payIcon" aria-hidden="true">
+					<use xlink:href="#icon-weixinzhifu"></use>
+				</svg>
+				<span>微信支付</span>
+				<div class="squaredFour">
+					<input type="radio" value="weixin" id="payNum1" name="payBox">
+					<label for="payNum1"></label>
+				</div>
+			</div>
+			<div class="pay-item" id="weixiaoDiv" style="display:none" onclick="doSelectThisPayMode('weixiao')">
+				<svg class="payIcon" aria-hidden="true">
+					<use xlink:href="#icon-weixinzhifu"></use>
+				</svg>
+				<span>微校支付</span>
+				<div class="squaredFour">
+					<input type="radio" value="weixiao" id="payNum2" name="payBox">
+					<label for="payNum2"></label>
+				</div>
+			</div>
+			<!-- <div class="pay-item" id="xianxiaDiv" style="display:none" onclick="doSelectThisPayMode('xianxia')">
+				<svg class="payIcon" aria-hidden="true">
+					<use xlink:href="#icon-mendian"></use>
+				</svg>
+				<span>线下支付</span>
+				<div class="squaredFour">
+					<input type="radio" value="xianxia" id="payNum3" name="payBox">
+					<label for="payNum3"></label>
+				</div>
+			</div> -->
+			<div class="store-btn"  onclick='confirmPayMode()'>确定</div>
+		</div>
+	</div>
+	
+	<div class="recharge" onclick='recharge()'>充值有优惠</div>
+	<nav class="mui-bar mui-bar-tab">
+		<a class="mui-tab-item mui-active" id="home">
+			<span class="mui-icon mui-icon-home"></span>
+			<span class="mui-tab-label">首页</span>
+		</a>
+		<a class="mui-tab-item outerCircle" id="myCar">
+			<div id="end" class="touxiang">
+				<!-- <div id="lastname"></div> -->
+				<img src="./img/shopCar.png" alt="">
+				<span id="totalCardNum" class="subscript" title="">0</span>
+			</div>
+		</a>
+		<a class="mui-tab-item" id="my">
+			<span class="mui-icon iconfont icon-touxiang" ></span>
+			<span class="mui-tab-label">我的</span>
+		</a>
+	</nav>
+
+<div style="display:none" id="showSomeThing"></div>	
+</body>
+
+</html>

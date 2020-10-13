@@ -1,0 +1,319 @@
+.outerCircle{
+  position: relative;
+  overflow: initial !important;
+}
+.outerCircle .touxiang{
+  position: absolute;
+  left: 50%;
+  top: -25px;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  z-index: 99;
+  background: #fff;
+}
+.outerCircle .touxiang img{
+  width: 50px;
+  height: 50px;
+  margin: 10px 12px 10px 8px;
+}
+.outerCircle .touxiang div{
+  font-size: 36px;
+  line-height: 70px;
+  color: #333;
+}
+.outerCircle .touxiang .subscript{
+  position: absolute;
+  right: -4px;
+  top: -4px;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  background: red;
+  border-radius: 50%;
+  color: #fff;
+}
+.mask{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.3);
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  display: none;
+}
+.car{
+  width: 90%;
+  height: 70%;
+  background: #fff;
+  position: fixed;
+  top: 10%;
+  left: 5%;
+  z-index: 99;
+  border-radius: 10px;
+  overflow: hidden;
+  display: none;
+  /* animation:myfirst 5s; */
+}
+@keyframes myfirst
+{
+0%   {bottom:-100%}
+25%  {bottom:-70%}
+50%  {bottom:-40%}
+75%  {bottom:-10%}
+100% {bottom:20%}
+}
+
+.car-title{
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: relative;
+}
+.car-title img{
+  width: 15px;
+  position: absolute;
+  right: 10px;
+  top: 12px;
+}
+.car-carList{
+  overflow-y: scroll;
+  height: calc(100% - 80px);
+  padding: 5px;
+}
+.car-carList-list{
+  height: 60px;
+  padding: 5px;
+  width: 100%;
+}
+.car-list-icon{
+  float: left;
+  width: 70px;
+  height: 50px;
+}
+.car-list-icon img{
+  width: 70px;
+  height: 50px;
+}
+.car-list-info{
+  float: left;
+  width: calc(100% - 140px);
+  height: 100%;
+  padding-left: 10px;
+  font-size: 14px;
+}
+.car-list-info-name{
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.car-list-info-price{
+  color: red;
+}
+.car-list-num{
+  float: left;
+  width: 70px;
+  height: 100%;
+  line-height: 50px;
+}
+.car-list-num img{
+  width: 20px;
+  vertical-align: middle;
+}
+.car-list-num span{
+  vertical-align: middle;
+}
+.car-settlement{
+  border-top: 1px solid #eee;
+  width: 100%;
+  height: 40px;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+}
+.car-settlement span{
+  font-size: 14px;
+  line-height: 40px;
+  margin-left: 16px;
+  width: 100%;
+  display: block;
+}
+.car-settlement span span{
+  color: red;
+  font-size: 16px;
+  display: initial;
+  margin: 0;
+}
+.car-settlement button{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100px;
+  height: 100%;
+  background: red;
+  color: #fff;
+  border: 0;
+  
+}
+.storeMask{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.3);
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+}
+.store{
+  width: 80%;
+  background: #fff;
+  position: fixed;
+  top: 25%;
+  left: 10%;
+  z-index: 9;
+  border-radius: 10px;
+  overflow: hidden;
+  /* animation:myfirst 5s; */
+}
+.store-title{
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: relative;
+  margin-bottom: 20px;
+}
+.store-item{
+  position: relative;
+  width: 80%;
+  height: 50px;
+  display: block;    
+  margin: 0 auto 20px;
+}
+.store-item span{
+  font-size: 22px;
+  line-height: 50px;
+}
+.store-btn{
+  width: 100%;
+  height: 50px;
+  background-color: rgba(255, 13, 13, 0.91);
+  color: #fff;
+  font-size: 19px;
+  text-align: center;
+  line-height: 50px;
+  letter-spacing: 40px;
+  text-indent: 40px;
+}
+.squaredFour {
+  display: inline-table;
+  width: 20px;
+  position: absolute;
+  top: 14px;
+  right: 10px;
+}
+.squaredFour label {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fcfff4;
+  background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.squaredFour label:after {
+  content: '';
+  width: 9px;
+  height: 5px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border: 3px solid #333;
+  border-top: none;
+  border-right: none;
+  background: transparent;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.squaredFour input[type=radio] {
+  visibility: hidden;
+}
+.squaredFour input[type=radio]:checked + label:after {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+
+.payMask{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.7);
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: none;
+}
+.pay{
+  width: 80%;
+  background: #fff;
+  position: fixed;
+  top: 30%;
+  left: 10%;
+  z-index: 999;
+  border-radius: 10px;
+  overflow: hidden;
+  padding-top: 15px;
+}
+.pay-item{
+  position: relative;
+  width: 80%;
+  height: 50px;
+  display: block;    
+  margin: 0 auto 20px;
+  display: none;
+}
+.pay-item span{
+  font-size: 22px;
+  line-height: 50px;
+}
+.pay-item .payIcon{
+  display: inline-block;
+  font-size: 28px;
+  top: 2px;
+  position: relative;
+}
+.payIcon{
+  width: 1em; 
+  height: 1em; 
+  vertical-align: -0.15em; 
+  fill: currentColor; 
+  overflow: hidden; 
+}
